@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>  <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="St Chad's Handforth">
 
     <title>St Chad's</title>
@@ -37,26 +38,38 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#hero">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Who are we?</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Who are we?
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pastoral-care.html">Pastoral Care</a></li>
+                            <li><a class="dropdown-item" href="hope-central.html">Hope Central</a></li>
+                            <li><a class="dropdown-item" href="outreach-ministry.html">Outreach Ministry</a></li>
+                            <li><a class="dropdown-item" href="vision.html">Vision</a></li>
+                            <li><a class="dropdown-item" href="whos-who.html">Who's Who?</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#leaders">Leaders</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            What's happening
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="prayer-and-worship.html">Prayer and Worship</a></li>
+                            <li><a class="dropdown-item" href="cafe-aroma.html">Café Aroma</a></li>
+                            <li><a class="dropdown-item" href="children-and-youth.html">Children and Youth</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sunday-service.html">Sunday Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#events">Events</a>
+                        <a class="nav-link" href="https://hopecentral.org.uk/" target="_blank" rel="noopener noreferrer">
+                            Hope Central <i class="fas fa-external-link-alt ms-1 small"></i>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#local-resources">Resources</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#find-us">Find Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -65,22 +78,49 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
-        <div class="hero-background">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-background" style="background-image: url('assets/images/stchadshandforth.webp');"></div>
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-background" style="background-image: url('');"></div>
+                    <div class="hero-overlay"></div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
         <div class="container">
-            <div class="row align-items-center" style="min-height: 70vh;">
+            <div class="row align-items-center min-vh-100">
                 <div class="col-lg-8 col-md-10 col-12 mx-auto text-center">
                     <h1 class="display-1 mb-4 hero-title">Welcome to St Chad's Handforth</h1>
                     <p class="lead mb-4">A welcoming Anglican church community in Handforth, Cheshire. Join us as we
                         grow in faith, hope, and love together.</p>
                     <a href="#about" class="btn btn-primary btn-lg me-3">Learn More</a>
-                    <a href="#contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">Get In Touch</a>
                     <!-- Social Media Links -->
                     <div class="social-links mt-4">
                         <a href="#" target="_blank" aria-label="Visit our Facebook page (opens in a new tab)"
-                            rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
+                            rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" target="_blank" aria-label="Visit our YouTube page (opens in a new tab)"
-                            rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                            rel="noopener"><i class="fa-brands fa-square-youtube"></i></a>
+                        <a href="#" target="_blank" aria-label="Visit our Instagram page (opens in a new tab)"
+                            rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="contact.html" aria-label="Find our location">
+                            <i class="fas fa-map-marker-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -108,7 +148,7 @@
                         <div class="livestream-overlay">
                             <div class="overlay-content">
                                 <h3>Watch Our Sunday Service</h3>
-                                <p>Live every Sunday at 10:30 AM</p>
+                                <p>Live every Sunday at 10:00 AM</p>
                                 <a href="sunday-service.html" class="btn btn-primary btn-lg">
                                     <i class="fa-solid fa-play me-2"></i>Watch Live Service
                                 </a>
@@ -127,14 +167,92 @@
         </div>
     </section>
 
-    <!-- Test Section to verify scrolling -->
-    <section id="test" style="padding: 4rem 0; background-color: #333; color: white; text-align: center;">
+    <!-- Footer -->
+    <footer class="footer bg-white text-dark py-5 border-top">
         <div class="container">
-            <h2>Scrolling Test Section</h2>
-            <p>If you can see this section, scrolling is working properly!</p>
-            <p>This is just a temporary section to test scrolling functionality.</p>
+            <div class="row">
+                <!-- Contact Section -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <div class="contact-footer">
+                        <p class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:office@stchadshandforth.org.uk" class="text-dark text-decoration-none">office@stchadshandforth.org.uk</a>
+                        </p>
+                        <p class="mb-3">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:01625532145" class="text-dark text-decoration-none">01625 532145</a>
+                        </p>
+                        <p class="small text-muted mb-0">
+                            Registered as a charity in England & Wales<br>
+                            Charity number 1149381
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Location Section -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="mb-3">Find Us</h5>
+                    <div class="location-footer">
+                        <p class="mb-0">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            Saint Chad's Church<br>
+                            <span class="ms-3">Wilmslow Road</span><br>
+                            <span class="ms-3">Handforth</span><br>
+                            <span class="ms-3">Cheshire</span><br>
+                            <span class="ms-3">SK9 3ES</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Links and Logos Section -->
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <h5 class="mb-3">Important Links</h5>
+                    <div class="footer-links mb-3">
+                        <a href="#" class="text-dark text-decoration-none d-block mb-2">
+                            <i class="fas fa-shield-alt me-2"></i>Safeguarding Policy
+                        </a>
+                    </div>
+                    
+                    <!-- Church of England Logo -->
+                    <div class="church-logo mb-3">
+                        <img src="assets/images/cofe.webp" 
+                             alt="Church of England" 
+                             class="img-fluid" 
+                             style="max-height: 60px;">
+                    </div>
+
+                    <!-- Social Media Icons -->
+                    <div class="social-media">
+                        <h6 class="mb-2">Follow Us</h6>
+                        <div class="social-links-footer">
+                            <a href="#" target="_blank" class="text-dark me-3" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-dark me-3" aria-label="YouTube">
+                                <i class="fa-brands fa-square-youtube"></i>
+                            </a>
+                            <a href="#" target="_blank" class="text-dark me-3" aria-label="Instagram">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                            <a href="contact.html" class="text-dark" aria-label="Location">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4 pt-4 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0 text-muted">
+                        © 2025 St Chad's Handforth. All Rights Reserved
+                    </p>
+                </div>
+            </div>
         </div>
-    </section>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -144,72 +262,6 @@
     <!-- Form handling JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Contact form handling
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    const formData = new FormData(contactForm);
-                    const name = formData.get('name');
-                    const phone = formData.get('phone');
-                    const email = formData.get('email');
-                    const message = formData.get('message');
-                    const emailInput = document.getElementById('email');
-                    const emailFeedback = document.getElementById('email-feedback');
-                    const phoneInput = document.getElementById('phone');
-                    const phoneFeedback = document.getElementById('phone-feedback');
-
-                    // Basic validation
-                    let isValid = true;
-
-                    // Email validation (if provided)
-                    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                        emailInput.classList.add('is-invalid');
-                        emailFeedback.style.display = 'block';
-                        emailInput.focus();
-                        isValid = false;
-                    } else {
-                        emailInput.classList.remove('is-invalid');
-                        emailFeedback.style.display = 'none';
-                    }
-
-                    // Phone validation (now required)
-                    if (!phone || phone.trim().length === 0) {
-                        phoneInput.classList.add('is-invalid');
-                        phoneFeedback.textContent = 'Phone number is required.';
-                        phoneFeedback.style.display = 'block';
-                        if (isValid) phoneInput.focus();
-                        isValid = false;
-                    } else if (!/^[\+]?[0-9\s\-\(\)]{10,}$/.test(phone)) {
-                        phoneInput.classList.add('is-invalid');
-                        phoneFeedback.textContent = 'Please enter a valid phone number.';
-                        phoneFeedback.style.display = 'block';
-                        if (isValid) phoneInput.focus();
-                        isValid = false;
-                    } else {
-                        phoneInput.classList.remove('is-invalid');
-                        phoneFeedback.style.display = 'none';
-                    }
-
-                    // Message validation
-                    if (!message || message.trim().length < 10) {
-                        alert('Please provide a message with at least 10 characters.');
-                        return;
-                    }
-
-                    // Name validation
-                    if (!name || name.trim().length < 2) {
-                        alert('Please provide your name.');
-                        return;
-                    }
-
-                    if (isValid) {
-                        alert(`Thank you ${name}! Your message has been received. We'll get back to you soon.\n\nFor immediate assistance, you can also:\n• Call/Text: 07957 813 360\n• Email: info@vinelifewilmslow.com`);
-                        contactForm.reset();
-                    }
-                });
-            }
-
             // Form handling (legacy safeguarding form - keeping for compatibility)
             const form = document.getElementById('safeguarding-form');
             if (form) {
@@ -242,9 +294,7 @@
                     }
 
                     // Response based on urgency
-                    let alertMessage = urgency === 'immediate'
-                        ? 'IMMEDIATE DANGER ALERT: If someone is in immediate danger, please call 999 right now!\n\nYour report has been noted, but for immediate help, contact emergency services directly.'
-                        : `Thank you for your report. Your concern has been recorded and will be reviewed by our safeguarding team.\n\nReference ID: SAF-${Date.now().toString().slice(-6)}`;
+                    let alertMessage = `Thank you for your report. Your concern has been recorded and will be reviewed by our safeguarding team.\n\nReference ID: SAF-${Date.now().toString().slice(-6)}`;
 
                     alert(alertMessage);
                     form.reset();

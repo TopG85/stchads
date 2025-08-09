@@ -52,34 +52,96 @@ h1 {
   background: linear-gradient(135deg, #1e92c4 0%, #155a7a 100%);
 }
 
+/* Hero Carousel Styles */
+#heroCarousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100vh;
+  position: relative;
+}
+
 .hero-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/stchadshandforth.webp');
   background-size: cover;
   background-position: center 10%;
   background-repeat: no-repeat;
   z-index: 1;
 }
 
-.hero-background::after {
-  content: '';
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: linear-gradient(45deg, rgba(30, 146, 196, 0.7), rgba(21, 90, 122, 0.6));
-  z-index: 1;
+  z-index: 2;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  z-index: 4;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 20px 20px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  z-index: 4;
+  margin-bottom: 2rem;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  opacity: 1;
 }
 
 /* Ensure content flows properly after hero */
 .hero-section + section {
   position: relative;
   z-index: 10;
+}
+
+/* Hero content positioning */
+.hero-section .container {
+  position: relative;
+  z-index: 3;
+  height: 100%;
 }
 
 /* Hero content positioning */
@@ -365,10 +427,505 @@ h1 {
     font-size: 1.5rem;
     margin: 0 0.5rem;
   }
+
+  /* Adjust carousel controls for mobile */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+  
+  .carousel-indicators {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  background-color: rgba(30, 146, 196, 0.95);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-item {
+  color: white !important;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white !important;
+}
+
+.dropdown-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Page Header Styles */
+.page-header {
+  background: linear-gradient(135deg, #1e92c4 0%, #2980b9 100%);
+  padding: 8rem 0 4rem 0;
+  margin-top: 0;
+  color: white;
+  text-align: center;
+}
+
+.page-header h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.page-header .lead {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* Content Section Styles */
+.pastoral-care-content,
+.hope-central-content,
+.outreach-content,
+.vision-content,
+.prayer-worship-content,
+.cafe-aroma-content,
+.children-youth-content {
+  background-color: white;
+  color: #333;
+  min-height: 100vh;
+}
+
+.pastoral-care-content h2,
+.hope-central-content h2,
+.outreach-content h2,
+.vision-content h2,
+.prayer-worship-content h2,
+.cafe-aroma-content h2,
+.children-youth-content h2 {
+  color: #1e92c4;
+  text-align: center;
+}
+
+.pastoral-care-content h3,
+.hope-central-content h3,
+.outreach-content h3,
+.vision-content h3,
+.prayer-worship-content h3,
+.cafe-aroma-content h3,
+.children-youth-content h3 {
+  color: #2980b9;
+}
+
+.pastoral-care-content h4,
+.hope-central-content h4,
+.outreach-content h4,
+.vision-content h4,
+.prayer-worship-content h4,
+.cafe-aroma-content h4,
+.children-youth-content h4 {
+  color: #1e92c4;
+}
+
+.pastoral-care-content .card,
+.hope-central-content .card,
+.outreach-content .card,
+.vision-content .card,
+.prayer-worship-content .card,
+.cafe-aroma-content .card,
+.children-youth-content .card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pastoral-care-content .card:hover,
+.hope-central-content .card:hover,
+.outreach-content .card:hover,
+.vision-content .card:hover,
+.prayer-worship-content .card:hover,
+.cafe-aroma-content .card:hover,
+.children-youth-content .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Leadership Team Styles */
+.leadership-team {
+  background-color: white;
+  color: #333;
+}
+
+.leadership-card {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.ministry-leaders {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.ministry-leader-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ministry-leader-card:hover {
+  transform: translateY(-3px);
+}
+
+.support-team {
+  background-color: white;
+  color: #333;
+}
+
+.support-role {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Vision Page Specific Styles */
+.vision-statement {
+  background: linear-gradient(135deg, #1e92c4 0%, #2980b9 100%);
+}
+
+.mission-statement {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.value-card {
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.priority-item,
+.program-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #1e92c4;
+  background-color: #f8f9fa;
+  border-radius: 0 5px 5px 0;
+}
+
+.future-goals {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.call-to-action {
+  background: linear-gradient(135deg, #1e92c4 0%, #2980b9 100%);
+}
+
+.contact-pastoral-care,
+.contact-hope-central,
+.contact-outreach {
+  border-radius: 10px;
+}
+
+/* Prayer and Worship Specific Styles */
+.service-details {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.special-event-card {
+  padding: 1.5rem;
+  border-left: 4px solid #1e92c4;
+  background-color: #f8f9fa;
+  border-radius: 0 5px 5px 0;
+}
+
+.worship-team-info {
+  background: linear-gradient(135deg, #1e92c4 0%, #2980b9 100%);
+}
+
+.contact-worship {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Cafe Aroma Specific Styles */
+.feature-card {
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.menu-items {
+  margin-top: 1rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-weight: 500;
+}
+
+.item-price {
+  color: #1e92c4;
+  font-weight: bold;
+}
+
+.opening-hours {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.hours-list {
+  margin-top: 1rem;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.hours-item:last-child {
+  border-bottom: none;
+}
+
+.day {
+  font-weight: 500;
+}
+
+.time {
+  color: #1e92c4;
+  font-weight: bold;
+}
+
+.event-item {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.event-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.volunteer-section {
+  background: linear-gradient(135deg, #1e92c4 0%, #2980b9 100%);
+}
+
+.contact-cafe {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Children and Youth Specific Styles */
+.age-group-card {
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.age-group-card:hover {
+  transform: translateY(-5px);
+}
+
+.program-details {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.program-card {
+  padding: 1.5rem;
+  border-left: 4px solid #1e92c4;
+  background-color: #f8f9fa;
+  border-radius: 0 5px 5px 0;
+  height: 100%;
+}
+
+.special-events {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.safety-info {
+  background: linear-gradient(135deg, #1e92c4 0%, #2980b9 100%);
+}
+
+.involvement-card {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.contact-children-youth {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  background-color: white;
+  color: #333;
+}
+
+.contact-section h2 {
+  color: #1e92c4;
+}
+
+.contact-info-card {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item h5 {
+  color: #1e92c4;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #1e92c4;
+  text-decoration: underline;
+}
+
+.office-hours {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  border-left: 4px solid #1e92c4;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.day {
+  font-weight: 500;
+}
+
+.time {
+  color: #1e92c4;
+  font-weight: bold;
+}
+
+.map-container {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-responsive {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-info {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  border-left: 4px solid #1e92c4;
+}
+
+.emergency-contact {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
 }
 
 @media (max-width: 576px) {
   .hero-title {
     font-size: 2rem;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 15%;
+  }
+  
+  .page-header {
+    padding: 6rem 0 3rem 0;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .hours-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .hours-row {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .age-group-card {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-info-card,
+  .map-container {
+    margin-bottom: 2rem;
   }
 }
