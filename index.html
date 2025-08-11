@@ -42,11 +42,10 @@
                             Who are we?
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="pastoral-care.html">Pastoral Care</a></li>
-                            <li><a class="dropdown-item" href="hope-central.html">Hope Central</a></li>
-                            <li><a class="dropdown-item" href="outreach-ministry.html">Outreach Ministry</a></li>
-                            <li><a class="dropdown-item" href="vision.html">Vision</a></li>
-                            <li><a class="dropdown-item" href="whos-who.html">Who's Who?</a></li>
+                            <li><a class="dropdown-item" href="#pastoral-care">Pastoral Care</a></li>
+                            <li><a class="dropdown-item" href="#outreach-ministry">Outreach Ministry</a></li>
+                            <li><a class="dropdown-item" href="#vision">Vision</a></li>
+                            <li><a class="dropdown-item" href="#whos-who">Who's Who?</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -63,9 +62,7 @@
                         <a class="nav-link" href="sunday-service.html">Sunday Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://hopecentral.org.uk/" target="_blank" rel="noopener noreferrer">
-                            Hope Central <i class="fas fa-external-link-alt ms-1 small"></i>
-                        </a>
+                        <a class="nav-link" href="https://www.hopecentral.org.uk" target="_blank" rel="noopener noreferrer">Hope Central</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -77,35 +74,33 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="slideshow-container">
+            <div class="slide fade-slide active">
+                <img src="assets/images/stchadshandforth.webp" alt="St Chad's Church Building" class="church-building-img">
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="hero-background" style="background-image: url('assets/images/stchadshandforth.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
-                    <div class="hero-overlay"></div>
-                </div>
-                <div class="carousel-item">
-                    <div class="hero-background" style="background-image: url('assets/images/congregation.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
-                    <div class="hero-overlay"></div>
-                </div>
+            <div class="slide fade-slide">
+                <img src="assets/images/congregation.webp" alt="Church Congregation" class="congregation-img">
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            
+            <!-- Navigation arrows -->
+            <a class="slide-prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="slide-next" onclick="changeSlide(1)">&#10095;</a>
+            
+            <!-- Dots indicators -->
+            <div class="slide-dots">
+                <span class="dot active" onclick="currentSlideSet(1)"></span>
+                <span class="dot" onclick="currentSlideSet(2)"></span>
+            </div>
         </div>
+        
+        <!-- Overlay for content -->
+        <div class="hero-content-overlay"></div>
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-8 col-md-10 col-12 mx-auto text-center">
-                    <h1 class="display-1 mb-4 hero-title">Welcome to St Chad's Handforth</h1>
+                    <h3 class="display-3 mb-2 text-center">Welcome to</h3>
+                    <h1 class="display-1 mb-2 hero-title text-center"><strong>St Chad's</strong></h1>
+                    <h3 class="display-3 mb-4 text-center">Handforth</h3>
                     <p class="lead mb-4">A welcoming Anglican church community in Handforth, Cheshire. Join us as we
                         grow in faith, hope, and love together.</p>
                     <a href="#about" class="btn btn-primary btn-lg me-3">Learn More</a>
@@ -120,6 +115,260 @@
                             rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
                         <a href="contact.html" aria-label="Find our location">
                             <i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay Informed Section -->
+    <section id="stay-informed" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5 text-dark">Stay Informed</h2>
+                    <p class="text-center lead mb-5 text-dark">Keep up to date with the latest news and events at St Chad's</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-newspaper fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Weekly News Sheet</h4>
+                            <p class="card-text text-muted">Stay updated with this week's services, events, and important announcements.</p>
+                            <a href="https://stchadshandforth.org.uk/userfiles/file/Week%2032%2010th%20Aug.pdf" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn btn-primary btn-lg">
+                                <i class="fas fa-download me-2"></i>Weekly News
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-book-open fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Monthly Inspire Magazine and Prayer Diary</h4>
+                            <p class="card-text text-muted">Our monthly magazine featuring inspirational articles and prayer diary for spiritual growth.</p>
+                            <a href="https://stchadshandforth.org.uk/userfiles/file/July%20%26%20August%2025%20.pdf" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn btn-primary btn-lg">
+                                <i class="fas fa-download me-2"></i>Magazine
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Are We Section -->
+    <section id="who-are-we" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5 text-dark">Who Are We?</h2>
+                    <p class="text-center lead mb-5 text-dark">Discover our mission, values, and commitment to serving our community</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Pastoral Care -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm" id="pastoral-care">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-heart fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Pastoral Care</h4>
+                            <p class="card-text text-muted">Pastoral Care continues to remain a priority in our church life. We have a team of 7 people and the two full time clergy who are dedicated to ensuring that people in our church, and those known to it are cared for pastorally. Other members of the congregation also care for one another and support those in need. The official team meets on a monthly basis to update each other on people who have been visited and contacted. We pray for them and ensure that, as far as possible, people receive the support and care that a church family should offer one another.</p>
+                            <p class="card-text text-muted">It has been very sad to lose some key members of our church family over the past year and we grieve with their families as we thank God for their lives and service.</p>
+                            <p class="card-text text-muted">As well as the team efforts we have a strong group of homegroups that meet every couple of weeks and look out for each other on an ongoing basis. As new people start to attend we are seeing these groups growing.</p>
+                            <a href="pastoral-care.html" class="btn btn-outline-primary">
+                                Learn More <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outreach Ministry -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm" id="outreach-ministry">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-hands-helping fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Outreach Ministry</h4>
+                            <p class="card-text text-muted">Our Outreach Ministry is a major part of what we do at St Chad's and can be divided into three areas. Our support is both financial and in prayer and participation.</p>
+                            <p class="card-text text-muted">Ministries of Mercy. We have continued in 2023/2024 to offer local and global acts of love and kindness to people in need. Our Pastoral Care is a part of this work, and described elsewhere in this report, as is our work in partnership with Hope Central. In addition to these two big areas we seek to reach out to national and international charities with finance and support. We continue to support the Manchester based charity, Hope for Justice, that work to stop modern day slavery. Internationally we support The Leprosy Mission, Barnabas, Open Doors, Christian Solidarity Worldwide and TearFund. All these organisations are seeking to help those in need.</p>
+                            <p class="card-text text-muted">International Church growth and Evangelism. We have built a strong link with Bob & Debbie Adhikary's ministry in Nepal. Steve and his wife, Jo plan to visit them again in November this year. Natasha Fraser is now working for GFA international, and we finished our support to Rebecca Mwape this year as she finished her nursing qualifications in Zambia. We also continue support the Medes and the Hembroughs who work in Turkey, both of whom were able to visit us this year and share an update.</p>
+                            <p class="card-text text-muted">National and local Evangelism and outreach. Our support for work in schools is done through Christians in Schools Trust, and with Steve's direct work as Chair of Governors at Handforth Grange School and Diocesan Trustee on the Frank Field Education Trust. The school obtained Outstanding in a recent Ofsted Report and won the TES school of the year award. We also support Howie Pickering, the True Freedom Trust and Capernwray Bible School. As a local church we have also run Alpha courses and seen people come to faith.</p>
+                            <p class="card-text text-muted">We have also been tremendously blessed by being joined by people from all over the world.</p>
+                            <a href="outreach-ministry.html" class="btn btn-outline-primary">
+                                Learn More <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision -->
+                <div class="col-lg-4 col-md-12 col-12 mb-4">
+                    <div class="card h-100 shadow-sm" id="vision">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-eye fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Our Vision</h4>
+                            <p class="card-text text-muted">Psalm 127 vs 1 says: Unless the LORD builds the house, the builders labour in vain. Unless the LORD watches over the city, the guards stand watch in vain.</p>
+                            <p class="card-text text-muted">As we think about vision it is essential to have this verse in our minds at all times. Churches can set visions and make strategies and can actually increase numbers in the congregation but unless the Lord builds the house our work is in vain. I take that to mean that building church numerically is not the same as building the house. In the letters of both Peter and Paul they both use the metaphor of a church as being a living house. People joined together to become a house where God himself dwells. This is a very different idea than simply growing a congregation numerically. It speaks of individuals growing in their relationship with the Lord and with each other. It speaks of individuals learning to use the gifts they've been given and serving others in some way in the church family.</p>
+                            <p class="card-text text-muted">So, as we look at our vision for the coming year we have this mind set in our forethought. And we have set ourselves four aims this coming year. The first aim is to grow our children's work. We have generally grown numerically over the past year or two. We have grown in diversity of nationalities and ages, but we are still lacking younger families and children. We rejoice in those we have coming and are seeking to add to the number of younger families coming into the church.</p>
+                            <p class="card-text text-muted">Secondly, we plan to take our community outreach with Hope Central to a new level. Working in partnership with CAP and their 'pilot' Community and Church Development Program we aim to grow the involvement of Church with Hope Central in blessing our community.</p>
+                            <p class="card-text text-muted">Thirdly, we want to ensure new people joining the church are made to feel really welcome, to feel integrated into the church family and find a place to serve and grow at St Chad's.</p>
+                            <p class="card-text text-muted">Finally, we are developing the infrastructure of our Church management by developing a new website and computer functionality within the office of the church. This will help with our day to day management and our communication with those seeking to find out more about us.</p>
+                            <p class="card-text text-muted">All of these developments sit alongside our basic aim to 'Know Christ and to Make Him Known.'</p>
+                            <a href="vision.html" class="btn btn-outline-primary">
+                                Learn More <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who's Who Section -->
+    <section id="whos-who" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5 text-dark">Who's Who?</h2>
+                    <p class="text-center lead mb-5 text-dark">Meet our dedicated team of clergy, staff, and volunteers who serve our community</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Curate -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-user-tie fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Revd Richard Reeve</h4>
+                            <h6 class="card-subtitle mb-3 text-muted">Curate</h6>
+                            <img src="assets/images/RevRichardReeve.webp" alt="Revd Richard Reeve" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                            <p class="card-text text-muted">Supporting our ministry with dedication and compassion, providing spiritual guidance and pastoral care to our community members.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Church Warden -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-hands-praying fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Rachel McDowell</h4>
+                            <h6 class="card-subtitle mb-3 text-muted">Church Warden</h6>
+                            <img src="assets/images/RachelMcDowell.webp" alt="Rachel McDowell" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                            <p class="card-text text-muted">Supporting the vicar and ensuring the smooth running of church operations, from services to administrative matters.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Children's Work Co-Ordinator -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-child fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Rachel Marshall</h4>
+                            <h6 class="card-subtitle mb-3 text-muted">Children's Work Co-Ordinator</h6>
+                            <img src="assets/images/RachelMarshall.webp" alt="Rachel Marshall" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                            <p class="card-text text-muted">Leading and coordinating all children's activities, ensuring engaging and meaningful experiences for our youngest community members.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Treasurer -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-calculator fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Chris Birch</h4>
+                            <h6 class="card-subtitle mb-3 text-muted">Treasurer</h6>
+                            <img src="assets/images/ChrisBurch.webp" alt="Chris Birch" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                            <p class="card-text text-muted">Managing the church's finances with care and transparency, ensuring good stewardship of our resources.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Administrator -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-clipboard-list fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Pat Grange</h4>
+                            <h6 class="card-subtitle mb-3 text-muted">Office Administrator</h6>
+                            <img src="assets/images/PatGrange.webp" alt="Pat Grange" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                            <p class="card-text text-muted">Managing the day-to-day administrative functions of the church and serving as the first point of contact for inquiries.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safeguarding Officer -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Alun Williams</h4>
+                            <h6 class="card-subtitle mb-3 text-muted">Safeguarding Officer</h6>
+                            <img src="assets/images/AlunWilliams.webp" alt="Alun Williams" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                            <p class="card-text text-muted">Ensuring the safety and protection of all members of our church community, particularly children and vulnerable adults.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Head of Resources -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-tools fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Simon Heal</h4>
+                            <h6 class="card-subtitle mb-3 text-muted">Head of Resources</h6>
+                            <img src="assets/images/SimonHeal.webp" alt="Simon Heal" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                            <p class="card-text text-muted">Overseeing the management and maintenance of our church facilities and resources to support our ministry.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Head of The Flower Team -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-seedling fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title text-dark">Sue Morrison</h4>
+                            <h6 class="card-subtitle mb-3 text-muted">Head of The Flower Team</h6>
+                            <img src="assets/images/SueMorrison.webp" alt="Sue Morrison" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                            <p class="card-text text-muted">Leading our flower arranging ministry, creating beautiful displays that enhance our worship and celebrate special occasions.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -328,6 +577,55 @@
                 });
             });
         });
+    </script>
+
+    <!-- Simple Slideshow JavaScript -->
+    <script>
+        let slideIndex = 1;
+        showSlide(slideIndex);
+
+        // Auto advance slides every 8 seconds
+        setInterval(function() {
+            slideIndex++;
+            if (slideIndex > document.querySelectorAll('.slide').length) {
+                slideIndex = 1;
+            }
+            showSlide(slideIndex);
+        }, 8000);
+
+        function changeSlide(n) {
+            showSlide(slideIndex += n);
+        }
+
+        function currentSlideSet(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            let slides = document.querySelectorAll('.slide');
+            let dots = document.querySelectorAll('.dot');
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current slide and activate dot
+            if (slides[slideIndex - 1]) {
+                slides[slideIndex - 1].classList.add('active');
+            }
+            if (dots[slideIndex - 1]) {
+                dots[slideIndex - 1].classList.add('active');
+            }
+        }
     </script>
 </body>
 
