@@ -966,8 +966,5 @@ h1 {
 @media (min-width: 992px) 
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .hero-title {
-    font-size: 4rem;
-  }
+@media (min-width: 1200px) 
 }
